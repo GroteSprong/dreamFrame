@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Grote Sprong: a simple framework for simple sites</title>
+      <link href="css/dreambits.css" rel="stylesheet" type="text/css"/>
+      <script src="js/dreambits.js"></script>
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+      gsLoadItem( 'inc/footer.html' , '#footer-load' )
+      gsLoadItem( 'inc/nav.html' , '#nav-load' );
+   });
+</script>
+
+<style>
+   :root {
+      --menu-content-order: -1;
+      --menu-content-justify: flex-start;
+      --site-logo-position: right center;
+   }
+
+
+</style>
+
+
+   </head>
+   <body>
+      <nav id="nav-load" style="height:105px"></nav>
+      <main>
+         <section>
+            <article data-gs-twocol>
+               <div>
+                  <h1>Reverse menu </h1>
+                  <ul>
+                     <li>Reverse the logo / links order in the main menu</li>
+                     <li>Position the logo and the links again</li>
+                    
+                  </ul>
+                 
+               </div>
+               <div>
+                  <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+               </div>
+            </article>
+         </section>
+        
+         <section>
+            <article>
+               <h2>Code</h2>
+<textarea rows="4">
+   --menu-content-order: -1;
+   --menu-content-justify: flex-start;
+   --site-logo-position: right center;
+</textarea>
+
+               <p>Use -1 for the menu order to get it first in line </p>
+               <p>
+                 Then align the menu and the background image to put everything in place. Rember by default they each use 50% of the available space.
+               </p>
+              
+              
+            </article>
+         </section>
+
+         
+      
+      </main>
+      <footer id="footer-load"></footer>
+      
+   </body>
+</html>

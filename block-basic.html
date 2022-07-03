@@ -1,0 +1,152 @@
+      <!DOCTYPE html>
+<html lang="nl">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Dream Frame: a simple framework for simple sites</title>
+      <link href="css/dreambits.css" rel="stylesheet" type="text/css"/>
+      <script src="js/dreambits.js"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+      gsLoadItem( 'inc/footer.html' , '#footer-load' )
+      gsLoadItem( 'inc/nav.html' , '#nav-load' );
+   });
+</script>
+
+
+   </head>
+   <body id="top">
+      <!-- 	grote sprong nv  -->
+      <div id="mobile-logo">
+         <div><a href="/"></a>
+         </div>
+      </div>
+      <div id="nav-load">      </div>
+      <main>
+         <section>
+            <article data-gs-twocol>
+               <div>
+                  <h1>Page Content in Blocks</h1>
+                  <ul>
+                     <li>Navigation and footer are full width</li>
+                     <li>The page content is inside the MAIN element, in what we call "Blocks"</li>
+                      <li>MAIN element is full width</li>
+                     <li>Blocks are made up of a SECTION and an ARTICLE</li>
+                     <li>SECTION is 100% width of MAIN.</li>
+                     <li>ARTICLE is 80.9% width of SECTION.</li>
+                     <li>Blocks have a margin between them</li>
+                     <li>ARTICLE is centered in the SECTION</li>
+                    <li>SECTION can contain multiple ARTICLE elements</li>
+                     
+                  </ul>
+
+<p>All this can be adjusted to your taste, see next block!</p>
+
+               </div>
+               <div>
+                  <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+               </div>
+            </article>
+         </section>
+
+        
+        
+         <section>
+            <article>
+               <h2>CSS Custom Properties</h2>
+               <p>These are the properties set up in the top of the CSS file.</p>
+               
+               
+               <textarea rows="9">
+    --max-main-width: auto;
+    --max-section-width: auto;
+    --max-article-width: auto;
+    --max-footer-width: auto;
+    --max-navigation-width: auto;
+    --sidebar1-width: var(--gold-mini);
+    --sidebar2-width: var(--gold-mini);
+    --fullheight: 100vh;
+               </textarea>
+            
+            <p>
+               This way you can build any kind of block variation. We have made some exmples for you, check out the other pages in this section.
+            </p>
+
+            <p>
+               The widths can be combined with background colors and / or background images to get the right design:
+            </p>
+
+ <textarea rows="9">
+    --main-bg-color: hsla(10,10%,90%,1);
+    --main-bg-image: url();
+    --section-bg-color: hsla(47,45%,78%,1);
+    --section-bg-image: url();
+    --section-fullwidth-bg-color: rgb(168, 53, 14);
+    --section-fullwidth-fontcolor: hsla(48, 11%, 94% , 1);
+    --article-bg-color: hsl(0, 0%, 100%);
+    --article-bg-image: url();
+               </textarea>
+
+<p>
+   It's also posible to set widths and colors for the navigation and the footer...
+</p>
+            
+            </article>
+         </section>
+        <section data-section-fullwidth>
+            <article>
+            <p>Make blocks 100% width of page.</p>
+            <p>Here's the code of this block:</p>
+
+<textarea rows="6">
+    <section data-section-fullwidth>
+            <article>
+            Content....
+            </article>
+         </section>
+</textarea>
+
+   <p>So, adding the attribute "data-section-fullwidth" will give you a block that is full width. </p>
+
+<p>In fact, nothing is changed to the layout, only the CSS background colors have been changed:</p>
+
+
+
+            </article>
+         </section>
+
+ <section>
+            <article>
+               <h2>Full width section properties</h2>
+<textarea rows="9">
+[data-section-fullwidth] {
+    background-color: var(--section-fullwidth-bg-color);
+    margin: var(--space-big-x4) auto;
+}
+
+[data-section-fullwidth] article {
+    background-color: transparent;
+    color: var(--section-fullwidth-fontcolor);
+}
+</textarea>
+
+<p>Note:<br/>
+var(--section-fullwidth-bg-color);<br/>
+var(--section-fullwidth-fontcolor);
+</p>
+
+               <p>These are the properties set up in the top of the CSS file. So you can set a color for the SECTION background, and a color for the ARTICLE font. The article background has been made transparent.
+               </p>
+
+               <p>
+                  Normally, the "margin" between blocks is actually created by padding on the article. but because the color sceme has switchec -the background color is now on the selection, and the article background is transparent- , the visual margin has disappeared. Therefore, real margins have been added to the section.
+               </p>
+            </article>
+ </section>
+
+      </main>
+     <footer id="footer-load"></footer>
+
+   </body>
+</html>
+

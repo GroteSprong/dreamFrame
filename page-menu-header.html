@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Grote Sprong: a simple framework for simple sites</title>
+      <link href="css/dreambits.css" rel="stylesheet" type="text/css"/>
+      <script src="js/dreambits.js"></script>
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+      gsLoadItem( 'inc/footer.html' , '#footer-load' )
+      gsLoadItem( 'inc/nav.html' , '#nav-load' );
+   });
+</script>
+
+<style>
+   :root {
+
+/* navigation block */
+   --nav-bg-image: url(../img/music.jpg);
+   --nav-bg-position: bottom left;
+
+/* the links */
+     --main-menu-height: var(--space-mega-x2);
+      /* --main-menu-height: var(--fullheight); */
+
+      --menu-content-justify: flex-end;
+      --menu-align-items: flex-end; 
+/* the logo */
+      --site-logo-height:100%;
+      --site-logo-position: bottom left;
+      
+      /* to hide logo, uncomment these 2 lines */
+      /* --site-logo: url(); */
+      /* --site-logo-width:0; */
+   }
+</style>
+
+
+   </head>
+   <body id="top">
+      <nav id="nav-load"></nav>
+      <main>
+         <section>
+            <article data-gs-twocol>
+               <div>
+                  <h1>Menu as header</h1>
+                  <ul>
+                     <li>Make the menu into a big header space</li>
+                     <li>Make menu a full-height block</li>
+                     <li>Hide logo or links</li>
+                     <li>Place logo and links where you want.
+                     </li>
+                     
+                  </ul>
+                  
+               </div>
+               <div>
+                  <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+               </div>
+            </article>
+         </section>
+        
+         <section>
+            <article>
+               <h2>Code in the page:</h2>
+               <p>
+                  <textarea rows="20">
+                     
+   /* navigation block */
+   --nav-bg-image: url(../img/music.jpg);
+   --nav-bg-position: bottom left;
+
+/* the links */
+     --main-menu-height: var(--space-mega-x2);
+      /* --main-menu-height: var(--fullheight); */
+
+      --menu-content-justify: flex-end;
+      --menu-align-items: flex-end; 
+/* the logo */
+      --site-logo-height:100%;
+      --site-logo-position: bottom left;
+      
+      /* to hide logo, uncomment these 2 lines */
+      /* --site-logo: url(); */
+      /* --site-logo-width:0; */
+                  </textarea>
+               </p>
+               <p>
+                  --nav-bg-image<br/>
+                  Add an image to the menu<br/>
+                  </p>
+                  --nav-bg-position<br/>
+                  Position the background image
+             <p>
+                --main-menu-height: var(--space-mega-x2);<br/>
+                Give the menu a height<br/>
+                --main-menu-height: var(--fullheight);  <br/>
+               Use this to give it the height of the complete browser window!
+                </p>
+
+                <p>
+                   --menu-content-justify: flex-start;<br/>
+      --menu-align-items: flex-end; <br/>
+      Horizontally and vertically position the links<br/>
+
+
+                </p>
+              
+              <p>
+                 --site-logo-height:100%;<br/>
+      --site-logo-position: bottom left;<br/>
+      Position the logo.
+              </p>
+              
+            </article>
+         </section>
+
+        
+      
+      </main>
+      <footer id="footer-load"></footer>
+      
+   </body>
+

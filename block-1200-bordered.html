@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nl">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Grote Sprong: a simple framework for simple sites</title>
+      <link href="css/dreambits.css" rel="stylesheet" type="text/css"/>
+      <script src="js/dreambits.js"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+      gsLoadItem( 'inc/footer.html' , '#footer-load' )
+      gsLoadItem( 'inc/nav.html' , '#nav-load' );
+   });
+</script>
+
+      <style>
+      /* custom styles block 1200 border*/
+
+      :root { 
+         /* block layout widths */ 
+         --max-main-width: 1200px; 
+         --max-section-width: 1180px;
+         --max-navigation-width:1200px;
+         --main-bg-color: hsla(15,58%,47%,1);
+         --section-bg-color: hsla(10, 60%, 70% , 1);
+         --site-logo-position:center;
+       }
+       
+       </style>
+   </head>
+   <body id="top">
+      <!-- 	grote sprong nv  -->
+      <div id="mobile-logo">
+         <div><a href="/"></a>
+         </div>
+      </div>
+      <div id="nav-load">      </div>
+      <!-- 	einde grote sprong nav  -->
+      <main>
+         <section>
+            <article data-gs-twocol>
+               <div>
+                  <h1>1200 width <br/>+ border</h1>
+
+<p>Just some other kind of content layout...</p>
+
+               </div>
+               <div>
+                  <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+               </div>
+            </article>
+         </section>
+         <section data-section-fullwidth>
+            <article>
+            <p data-text-align="center">XXxXX</p>
+            <p></p>
+            <p>  
+            </article>
+         </section>
+
+         <section>
+            <article>
+               <h2>Width of elements</h2>
+               
+                  <textarea rows="4">
+CSS:
+   --max-main-width: 1200px;
+   --max-section-width: 1180px;
+   --max-navigation-width:1200px;
+                  </textarea>
+                  <p>The main section (the page content) has a maximum width of 1200px.
+                  </p>
+                  <p>
+                  Section elements have a width of 1180px, so the background color of the section shows as a kind of border 10px on left and right side if width of the screen is 1220 pixels or more.
+                  </p>
+                  <p>We adjusted the navigation width also, but it could be left fullwidth.</p>
+            </article>
+         </section>
+         <section>
+            <article>
+               <h2>Background colors</h2>
+               <textarea rows="4">
+         --main-bg-color: hsla(15,58%,47%,1);
+         --section-bg-color: hsla(10, 60%, 70% , 1);
+         --site-logo-position:center;
+               </textarea>
+               
+<p>Colors have been adjusted, to get the desired effect. Logo position cou</p>
+
+            </article>
+         </section>
+         <section>
+            <article>
+               <h2>Simple &quot;modules&quot;</h2>
+               <p>Any kind of stuff that makes life easier. From two-column gadget to video player.</p>
+               <p>Look at the block at the top of the page: Text on the left side, image on the right. It can be achieved bij adding an attribute selector to an article within a section: data-gs-twocol. On smaller screens, the columns will dissapear and the content will be stacked.&nbsp;</p>
+               <p> <textarea rows="7">
+                  <section>
+                     <article data-gs-twocol>
+                        <div>Column 1</div>
+                        <div>Column 2</div>
+                  </section>
+                   </textarea> </p>
+            </article>
+         </section>
+      </main>
+      <footer id="footer-load">
+         <section data-gsfooter>
+            <article>
+               Copyleft 2020 Grote Sprong | We use no cookies | We won't track you
+</article>
+         </section>
+      </footer>
+
+   </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Grote Sprong: a simple framework for simple sites</title>
+      <link href="css/dreambits.css" rel="stylesheet" type="text/css"/>
+      <script src="js/dreambits.js"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+      gsLoadItem( 'inc/footer.html' , '#footer-load' )
+      gsLoadItem( 'inc/nav.html' , '#nav-load' );
+   });
+</script>
+
+ <style>/* custom styles */:root { --max-section-width: 1200px; --max-main-width: 1200px; --max-footer-width: 1200px; --max-navigation-width: 1200px; } section { background-color: var(--article-bg-color); }</style>
+
+   </head>
+   <body id="top">
+      <nav id="nav-load"></nav>
+      <main>
+        
+         <section>
+            <article data-gs-twocol>
+               <div>
+                  <h1 data-m0>1200 width</h1>
+                  <textarea rows="14">
+
+   :root { 
+      --max-section-width: 1200px;
+      --max-main-width: 1200px;
+      --max-footer-width: 1200px;
+      --max-navigation-width: 1200px; 
+      }
+    
+    section {
+       background-color:var(--article-bg-color);
+   }
+   
+                  </textarea>
+                  <p>Section, Main, footer and navigation all have a width of 1200px maximum. To make everything one block, the section has been given the same background color as the article.
+                  </p>
+               </div>
+               <div>
+                  <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+               </div>
+            </article>
+         </section>
+         
+         <section>
+            <article>
+               <h2>Block layout</h2>
+               <p>SECTION element with a centered ARTICLE element inside. Standard way of building blocks. ARTICLE will take care of equal content width everywhere.</p>
+               <p><b>PUT ALL CONTENT WITHIN THE ARTICLE BLOCK</b><br/> <b>MARGINS AND PADDINGS ARE TAKING CARE OF</b></p>
+               <p>Use background colors or background images to layout the blocks...</p>
+            </article>
+         
+            <article>
+               <h2>CSS Custom Properties</h2>
+               <p>Also known as CSS varibles. Set all the variables for fonts, colors, widths ect in the top of the CSS file.&nbsp;</p>
+               <h2> Attribuut selectors</h2>
+               <p>All the custom properties are implemented in the code as CSS atribute selectors, using the data- prefix. Why not using classes? <br/>
+                  Attribute selectors can be easy manupilated with Javascript. </p>
+            </article>
+        
+            <article>
+               <h2>Simple &quot;modules&quot;</h2>
+               <p>Any kind of stuff that makes life easier. From two-column gadget to video player.</p>
+               <p>Look at the block at the top of the page: Text on the left side, image on the right. It can be achieved bij adding an attribute selector to an article within a section: data-gs-twocol. On smaller screens, the columns will dissapear and the content will be stacked.&nbsp;</p>
+               <p> <textarea rows="7">
+                  <section>
+                     <article data-gs-twocol>
+                        <div>Column 1</div>
+                        <div>Column 2</div>
+                  </section>
+                   </textarea> </p>
+            </article>
+         </section>
+      </main>
+      <footer id="footer-load"></footer>
+   
+   </body>
+</html>
+

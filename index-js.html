@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Grote Sprong: a simple framework for simple sites</title>
+      <link href="css/dreambits.css" rel="stylesheet" type="text/css"/>
+      <script src="js/dreambits.js"></script>     
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+      gsLoadItem( 'inc/footer.html' , '#footer-load' )
+      gsLoadItem( 'inc/nav.html' , '#nav-load' );
+   });
+</script>
+
+ 
+
+   </head>
+   <body>
+      <nav id="nav-load"></nav>
+      <main>
+         <section data-animation-fadeIn>
+            <article data-gs-twocol>
+               <div>
+                  <h1 data-m0>Javascript Fetch</h1>
+                  <ul>
+                     <li>Fetch the navigation file and the footer</li>
+                     <li>Link to other pages to load into the MAIN section (or elsewhere)</li>
+                     <li>
+                        Fetch anything from other sites (if permitted)
+                     </li>
+                     <li>
+                        Connect your sites by cross-loading content directly between your sites.
+                     </li>
+                  </ul>
+                  <p>
+                     This way, as in the first feature every page will get the most recent navigation menu, without having to be updated. This is used throuout all pages. Other features are optional to use at your liking.
+                  </p>
+               </div>
+               <div>
+                  <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+               </div>
+            </article>
+         </section>
+        
+         <section>
+            <article>
+               <h2>Loading content automatically</h2>
+               <p>A script will be downloaded in parallel to parsing the page, and executed after the page has finished parsing:</p>
+
+<p>
+   <textarea rows="3">
+            <script src="js/dreambits.js" refer></script>     
+   </textarea>
+</p>
+
+               <p>
+                  after this, code is used to fetch the navigation and footer, once the page content is loaded:
+             </p>
+              
+
+               <p>
+                  <textarea rows="8">
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+      gsLoadItem( 'inc/footer.html' , '#footer-load' )
+      gsLoadItem( 'inc/nav.html' , '#nav-load' );
+   });
+</script>
+                  </textarea>
+               </p>
+
+                <p>
+                  All code is in the head of the page. This script can be changed on the page, per page. Load more content in more area's of the page, load different navigation parts or footer for this page, ect.
+               </p>
+              
+<p>
+   The function gsLoadItem is in the javascript file. The first line loads the file 'footer.html' into the element that has an id of 'footer-load'. Html code below:
+</p>
+ <textarea rows="4">
+    <footer id="footer-load"></footer>
+ </textarea>
+              
+            </article>
+         </section>
+
+          <section>
+            <article>
+                <h2>Fetch!</h2>
+               <p>The Javascript "fetch" function is an addition in javascript, included in every browser. It can be used to load data or pages from your own site, or from other sites (if you have permission)
+
+               </p>
+               <p>
+                  Fetch works in every browser, is part of the Javascript Open Standard developed bij de Word Wide Web Consortium. As so, it has to work in any device or browser and will be backwards-compatibe, meaning, it will keep working for years and maybe forever.
+               </p>
+               <p>For more information, check the docs.</p>
+              
+            </article>
+         </section>
+
+          <section>
+            <article>
+                <h2>CORS</h2>
+               <p>For security, as a default, Javascript can only load data when the HTTP protocol is used (so, on a web server) , and can only load data from the same domain.
+               </p>
+                  
+               <p>This can be a problem when viewing pages locally and making pages. </p>
+              
+            </article>
+         </section>
+      
+      </main>
+      <footer id="footer-load"></footer>
+     
+   </body>
+</html>

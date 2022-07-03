@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Grote Sprong: a simple framework for simple sites</title>
+      <link href="css/dreambits.css" rel="stylesheet" type="text/css"/>
+      <script src="js/dreambits.js"></script>
+      <script>
+   document.addEventListener('DOMContentLoaded', () => {
+      gsLoadItem( 'inc/footer.html' , '#footer-load' )
+      gsLoadItem( 'inc/nav.html' , '#nav-load' );
+      gsLoadItem( 'modules/what.html' , 'main' );
+   });
+</script>
+   </head>
+   <body id="one-sidebar">
+      <nav id="nav-load"></nav>
+      
+      <main></main>
+      
+      <aside id="sidebar1">
+         <section>
+            <a href="#" onclick="gsLoadItem('modules/what.html','main')">What is it?</a>
+                      <a href="#" onclick="gsLoadItem('modules/two-columns.html','main')">Two columns</a>
+
+            <a href="#" onclick="gsLoadItem('modules/buttons.html','main')">Buttons</a>
+          <a href="#" onclick="gsLoadItem('modules/cards.html','main')">Cards</a>
+          <a href="#" onclick="gsLoadItem('modules/slider.html','main')">Slider page</a>
+
+           
+         </section>
+      </aside>
+      <footer id="footer-load"></footer>
+     
+   </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="keywords" content="javascript, fetch, vanilla"/>
+      <meta name="description" content="Loading assets with javascript"/>
+      <title>Dreambits Framework: a simple framework for simple sites</title>
+     
+      <link href="css/dreambits.css" rel="stylesheet" type="text/css"/>
+      <script src="js/dreambits.js"></script>
+     <script>
+   document.addEventListener('DOMContentLoaded', () => {
+      gsLoadItem( 'inc/footer.html' , '#footer-load' )
+      gsLoadItem( 'inc/navjs.html' , '#nav-load' );
+   });
+     </script>
+
+
+   </head>
+   <body id="top">
+      <!-- <div class="bgbody"></div> -->
+      <nav id="nav-load"></nav>
+      <main id="main">
+         <section data-animation-fadeIn>
+            <article data-gs-twocol> 
+               <div>
+                  <h1>Elementen inladen</h1>
+                  <p>Andere pagina's inladen zonder de pagina te verversen.<br/>
+                  We gebruiken javascript om het contentgedeelte van andere pagina's in de huidige pagina in te laden. Dit is alles binnen het "main" element. </p>
+                  <p>Dit kan ook een pagina van een ander domein zijn. Dit laatse zal niet lokaal werken, hiervoor moet de pagina online staan. Tevens moet er een CORS-HEADER regel opgenomen worden in het externe domein, om toe te staan dat wij de pagina hier inladen. </p>
+                  <p>
+                     Is aan die voorwaarden voldaan, dan kun je dynamisch pagina's of delen van pagina's inladen in andere sites, waar je maar wilt. Perfect om data uit te wisselen als je meerdere domeinen hebt.  </p>
+
+
+
+                  
+               </div>
+               <div data-f-30w>
+                  <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+               </div>
+            </article>
+         </section>
+
+<section>
+   <article>
+      <p>
+                     Hieronder nog een voorbeeld waarbij we enkel het inschrijfformulier van de site qisign.nl hier inladen. </p>
+                  <div id="qisigninschrijfform"><a href="#" onclick="gsLoadId('https://qisign.nl/inschrijven.html','#qisigninschrijfform','fadeIn')">inschrijven</a>
+                  </div>
+   </article>
+</section>
+
+
+      </main>
+      <!-- start sprong footer -->
+      <footer id="footer-load"></footer>
+     
+   </body>
+</html>

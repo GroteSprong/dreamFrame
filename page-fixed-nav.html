@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Grote Sprong: a simple framework for simple sites</title>
+      <link href="css/dreambits.css" rel="stylesheet" type="text/css"/>
+      <script src="js/dreambits.js"></script>
+
+    
+   </head>
+   <body id="top">
+      <nav id="nav-load" data-fixed-top></nav>
+      <main data-main-padding-top>
+         <section>
+            <article data-gs-twocol>
+               <div>
+                  <h1 data-m0>Fixed navbar</h1>
+                  
+               </div>
+               <div>
+                  <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+               </div>
+            </article>
+         </section>
+         <section section-variant>
+            <p>Build pages with simple SECTION and ARTICLE html elements.</p>
+            <p>This is just a SECTION element, which will take whole width of the page.</p>
+            <p>  
+         </section>
+         <section>
+            <article data-bgcolor>
+               <p>SECTION element with ARTICLE element inside. standaard way of builing blocks. ARTICLE will take care of equal content width everywhere.</p>
+               <p><b>PUT ALL CONTENT WITHIN THE ARTICLE BLOCK</b></p>
+               <p>Use background colors or background images to layout the blocks...</p>
+            </article>
+         </section>
+         <section data-bgcolor2>
+            <article data-bgcolor data-fontcolor1>
+               <h2>CSS Custom Properties</h2>
+               <p>Also known as CSS varibles. Set all the variables for fonts, colors, widths ect in the top of the CSS file.&nbsp;</p>
+               <h2> Attribuut selectors</h2>
+               <p>All the custom properties are implemented in the code as CSS atribute selectors, using the data- prefix. Why not using classes? <br/>
+                  Attribute selectors can be easy manupilated with Javascript. </p>
+               <h2> Vanilla Javascript</h2>
+               <p>
+                  A powerfull version of Javascript is now built in the browser itself and it will work in any modern browser! No need to use external libaries, which you have no control over, will have to be updated, ect ect. <br/>
+                  Just as HTML or CSS, this Javascript is backwards compatible and will be working from now, till forever.   </p>
+            </article>
+         </section>
+      </main>
+      <footer id="footer-load"></footer>
+      <script>
+window.onload = init;
+
+function init() {
+//fetch-->
+
+
+gsLoadItem( 'inc/footer.html' , '#footer-load' )
+gsLoadItem( 'inc/nav.html' , '#nav-load' );
+
+
+}
+
+</script>
+   </body>
+</html>

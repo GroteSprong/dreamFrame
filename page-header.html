@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Grote Sprong: a simple framework for simple sites</title>
+      <link href="css/dreambits.css" rel="stylesheet" type="text/css"/>
+      <script src="js/dreambits.js"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+      gsLoadItem( 'inc/footer.html' , '#footer-load' )
+      gsLoadItem( 'inc/nav.html' , '#nav-load' );
+   });
+</script>
+    
+   </head>
+   <body id="top">
+       
+      <header data-window-height="small">
+         
+         <div><p></p></div>
+         <h1>Go for It!</h1>
+      </header>
+           
+           <nav id="nav-load"></nav>
+
+      <main>
+         <section>
+            <article data-gs-twocol>
+               <div>
+                  <h1 data-margin="0">Header</h1>
+                  <ul>
+                     <li>Add a header area as a page starter</li>
+                     <li>Customize with data-attributes</li>
+                    
+                  </ul>
+                  
+               </div>
+               <div>
+                  <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+               </div>
+            </article>
+         </section>
+         
+         <section>
+            <article>
+               <h2>Code</h2>
+
+<textarea rows="5">
+   <header data-window-height="small">
+      <div><p></p></div>
+      <h1>Go for It!</h1>
+   </header>
+</textarea>
+
+
+               <p>If you want a header, put the code after the opening body tag, or, if you want the header beneath the menu, after the closing nav tag 
+
+               </p>
+
+<p>Here we have used:<br/>
+ data-window-height="small"<br/>
+ 
+ It will scale the height relative to the window height, but you can use all available heights here.
+ </p>
+
+<p>
+   By default the header consists of two equal width parts....
+</p>
+
+                  CSS variables to use:<br/>
+                  <p>
+Put an image behind the complete header area:<br/>
+                  --header-bg-image: url();<br/>
+                   Position the background image<br/>
+                  --header-bg-position: center;<br/>
+                  </p>
+                  <p>
+                  Use a background image just for the div area<br/>
+                  --header-div-image: url(../img/music.jpg);<br/>
+
+                  </p>
+               
+               <p>Use background colors or background images to layout the blocks...</p>
+            </article>
+         </section>
+         
+      </main>
+      <footer id="footer-load"></footer>
+     
+   </body>
+</html>
