@@ -1,0 +1,62 @@
+<section data-animation-fadeIn>
+   <article>
+      <h2>The basics</h2>
+      <p> 
+        At the base lies the HTML code. Without any design like columns or further complications, pages can build like blocks of content that will be placed after, in other words beneat each other. Much like Bootstrap works, only with simpler code. Let's begin with the body, the visual part of the page, and leave the head section empty for now:  </p>
+      <p> <textarea rows="15">
+<!DOCTYPE html>
+<html lang="en">
+   <head></head>
+   <body id="top">
+      <nav id="nav-load"></nav>
+      <main>
+         <section>
+            <article>
+            </article>
+         </section>
+      </main>
+      <footer id="footer-load"></footer>
+   </body>
+</html>
+   </textarea></p>
+      <p>Every page will have a navigation (nav), a main section with all the content (main), and a footer (footer)</p>
+      <p>The navigation and the footer will be loaded by a javascript file, you can find the script tag under the footer. </p>
+      <p>So this means every page will automagically load the same navigation and footer. (If you would like to load some other navigation or footer on some of the pages, this is very simple to accomplish) </p>
+      <p>
+         All the content of a page will be inside a "main" element. This content can also be loaded with javascript, just as the nav and footer sections. <br/>
+      </p>
+         <p>This would make the pages even more simple:</p>
+
+  <p> <textarea rows="10">
+<!DOCTYPE html>
+<html lang="en">
+   <head></head>
+   <body id="top">
+      <nav id="nav-load"></nav>
+      <main id="main-load"></main>
+      <footer id="footer-load"></footer>
+   </body>
+</html>
+   </textarea></p>
+
+   <p>
+      A script in the head section will load the navigation, content and footer.
+   </p>
+      
+   </article>
+   <article>
+      <h2>Main content</h2>
+      <p>
+         The main section contains the content of the page. It is structured in blocks that are placed beneath each other. </p>
+      <p>
+      A block can consist of two containers: a section element that has a 100% width and serves as a wrapper, and an article element with the content of the block. It will have a standard width of 80.9% width of the screen, which is based on the gulden ratio. </p>
+   </article>
+</section>
+<section>
+   <article>
+   <h2>Width of the site</h2>
+   <p>
+         You can set the maximum width of the navigation, footer, section and article seperately, so you can make any type of building block variant for the site.  </p>
+   </article>
+</section>
+

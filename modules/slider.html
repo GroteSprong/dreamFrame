@@ -1,0 +1,100 @@
+            <section data-animation-fadeIn>
+                <article data-gs-twocol>
+                    <div>
+                        <h1>Slider</h1>
+                       <ul>
+                     <li>In page or as a lightbox</li>
+                     <li>One slideshow per page</li>
+                   </ul>
+                    </div>
+                    <div>
+                        <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <article>
+                   <h2>HTML code</h2>
+                   <textarea rows="7">
+                      <div class="gs-slider lemar">
+                        <img class="sliderImg" src=""/>
+                        <p class="forward"><img src="img/icons/right-arrow.svg"/></p>
+                        <p class="back"><img src="img/icons/left-arrow.svg"/></p>
+                        <p class="minmax"><img src="img/icons/zoomIn.svg"/></p>
+                    </div>
+                   </textarea>
+                   
+<p>Use the class".gs-slider" to make the div or other block a slider. Add a second class for the name of the slider. "sliderImg" will show the current slide. "forward" the next, "back" the one before. "minmax" will change from inpage slider or fullscreen.<br/>
+Use your own forward, back and fullscreen images if you want.</p>
+
+                </article>
+            </section>
+
+ <section>
+                <article>
+                   <h2>JAVASCRIPT code</h2>
+                   <textarea rows="9">
+   if (sliderShow === "lemar") {
+            images= Array(
+               "Le-Mar-formentera-90r-2.jpg" ,
+               "Le-Mar-formentera-90r-4.jpg" ,
+               "Le-Mar-naakt.jpg"
+            )
+   }
+                   </textarea>
+                   
+<p>Open "dreambits.js" in the "js" folder and look for "sliderShow". If you find it, copy it, paste it below the one you copied, and adjust the picture names.<br/>
+You can add as many pictures you want.</p>
+
+<p>If you would ever like to upgrade Dreambits Framework, it is safer to put all your sliders in a seperate javascript file and link that to the page. </p>
+
+                </article>
+            </section>
+
+            <section>
+                <article>
+                   <h2>ADJUSTMENTS</h2>
+                   <textarea rows="9">
+   if (sliderShow === "bunkers") {
+      imgpath = "img-bunk/";
+      ani = "fadeIn";
+           images= Array(
+               "625-ab1.jpg" ,
+               "625-ab2.jpg" ,
+               "630-kkw11.jpg",
+               "630-route-mb.jpg"
+              
+            )
+   }
+                   </textarea>
+                   
+<p>If your images are NOT in /img/slider/ , use "imgpath" to point to the right directory. Can be anywhere.</p>
+
+<p>If you want an other animation, use "ani" to set it. Look in the dreambits.css file and search for "animations" to find all the available. </p>
+
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <div class="gs-slider lemar">
+                        <img class="sliderImg" src=""/>
+                        <p class="forward"><img src="img/icons/right-arrow.svg"/></p>
+                        <p class="back"><img src="img/icons/left-arrow.svg"/></p>
+                        <p class="minmax"><img src="img/icons/zoomIn.svg"/></p>
+                    </div>
+                </article>
+              </section>
+
+              <section>
+                <article>
+                    <div class="gs-slider bunkers">
+                        <img class="sliderImg" src=""/>
+                        <p class="forward"><img src="img/icons/right-arrow.svg"/></p>
+                        <p class="back"><img src="img/icons/left-arrow.svg"/></p>
+                        <p class="minmax"><img src="img/icons/zoomIn.svg"/></p>
+                    </div>
+                </article>
+              </section>
+      
+     

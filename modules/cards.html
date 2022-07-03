@@ -1,0 +1,129 @@
+         <section data-animation-transForm>
+            <article data-gs-twocol>
+               <div>
+                  <h1>Cards:</h1>
+                  <ul>
+                     <li>Small content boxes</li>
+                     <li>Made up of a header, content area and footer</li>
+                     <li>Placed next to each other. </li>
+                     <li>Equal height regardless content.</li>
+                     <li>Responsive: a card will go to a new row when not enough space.</li>
+                     <li>Customise with attribute selectors</li>
+                     <!-- <li>Image viewer</li>
+              <li>WebP afbeeldingen en backgrounds</li>
+              <li>Mobiel menu</li> -->
+                  </ul>
+               </div>
+               <div>
+                  <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+               </div>
+            </article>
+         </section>
+         <section data-gs-cardgroup>
+            <div data-gs-card>
+               <header data-gs-cardheader>
+                  <img src="img/grid-flexbox.png" alt="Card header" title="Card header"/>
+               </header>
+               <div data-gs-cardcontent>
+                  <h2>HTML Code</h2>
+                  <div>
+                     <textarea rows="10">
+   <section data-gs-cardgroup>
+      <div data-gs-card>
+         <header data-gs-cardheader></header>
+         <div data-gs-cardcontent>
+            <h2></h2>
+         </div>
+         <footer data-gs-cardfooter></footer>
+      </div>
+   </section>
+                     </textarea>
+                  </div>
+               </div>
+               <footer data-gs-cardfooter>
+                  <p>  <a data-gs-button href="#">more info</a></p>
+               </footer>
+            </div>
+            <div data-gs-card>
+               <header data-gs-cardheader>
+                  <img src="img/webdesign.png" alt="cards" title="card"/>
+               </header>
+               <div data-gs-cardcontent>
+                  <h2>
+                        Code explain </h2>
+                  <div>
+                     <p>Put in one SECTION element with an attribute: <b>data-gs-cardgroup</b></p>
+                     <p>
+                     Inside that, put a DIV with an attribute: <b> data-gs-card</b></p>
+                     Inside that div, place HEADER, SECTION and FOOTER elements.<br/>
+                     Add more DIVs with data-gs-card to add more cards to the group. Be sure they are inside the SECTION element with the data-gs-cardgroup attribute.
+                  </div>
+               </div>
+               <footer data-gs-cardfooter>
+                <p>  <a data-gs-button href="#">more info</a></p>
+               </footer>
+            </div>
+            <div data-gs-card>
+               <header data-gs-cardheader="">
+                  <img src="img/grid-flexbox.png" alt="Card" title="card"/>
+               </header>
+                <div data-gs-cardcontent>
+                  <h2>the Cardgroup CSS</h2>
+                  <div class="card-text">
+                     <textarea rows="4">
+[data-gs-cardgroup] {
+    display: flex;
+    flex-wrap: wrap;
+}
+                        
+                     </textarea>
+                     <p>
+   All we need for the group is a display of "flex", so the cards will be next to each other by default. Flex-wrap is set to "wrap", so that, if there's not enough room, the flex element (the card) will be placed on the next line.</p>
+                  </div>
+               </div>
+               <footer data-gs-cardfooter>
+                 <p>  <a data-gs-button href="#">more info</a></p>
+               </footer>
+            </div>
+         </section>
+
+<section data-gs-cardgroup>
+            <div data-gs-card>
+               <header data-gs-cardheader>
+                  <h2>Card CSS</h2>
+               </header>
+                <div data-gs-cardcontent>
+                  <h2>the card CSS</h2>
+                  <div class="card-text">
+                     <textarea rows="11">
+[data-gs-card] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 0 var(--card-min-width);
+    background-color: var(--bgcolor1);
+    border: var(--border2);
+    margin: var(--space-big);
+}
+                        
+                     </textarea>
+                     <p>
+   The card is also a flex element. It has the direction "column", so its items will be placed underneath each other, not next to each other. The children are the header, content and footer.</p>
+                     <p>
+   third line: justify-content: space-between;<br/>
+   This means the items will be put straight against top and bottom, with equal space between. This means the header will be forced to the top of the card, and the footer to the bottom.</p>
+                     <p>
+   flex: 1 0 var(--card-min-width);<br/>
+   This is saying three things: the card will grow if possible, but it will not shrink. And the var tells us what the minimum width of the card should be. You can set this var yourself in top of the stylesheet. Default setting is 15em. This means, a card cannot be smaller than 15em. If there's not enough room, the card will be placed on the next line.</p>
+                     <p>
+   Background-color, border and margin you can set also in the vars at the top of the CSS file.</p>
+                  </div>
+                </div>
+               
+               <footer data-gs-cardfooter>
+                  <p>  <a data-gs-button href="#">more info</a></p>
+               </footer>
+            </div>
+         </section>
+     
+    

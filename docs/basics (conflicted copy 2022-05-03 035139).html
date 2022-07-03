@@ -1,0 +1,82 @@
+<section data-animation-Blur>
+    <article>
+      <h2>Navigation - Main -Footer</h2>
+      <p> 
+        All pages have a navigation, a main area, and a footer. Let's look at the code of the page, we leave the head section empty for now:  </p>
+      <p> 
+         
+         <textarea rows="17">
+<!DOCTYPE html>
+<html lang="en">
+   <head></head>
+   <body id="top">
+      <nav id="nav-load"></nav>
+      <main>
+         <section>
+            <article>
+            </article>
+         </section>
+      </main>
+      <footer id="footer-load"></footer>
+      <script></script>
+   </body>
+  </html>
+   </textarea>
+   
+   </p>
+      <p>Every page can have a navigation (nav), a main section with all the content (main), and a footer (footer). Normally this will be the case, but for landing pages and such you could leave navigation and footer out if you want.</p>
+
+      <p>The navigation and the footer will be loaded by a javascript file, you can find the script tag under the footer. For that, check out the <a href="navigation.html">navigation</a> and <a href="script.html">Javascript</a> docs. </p>
+      
+      <p>So this means every page will automagically load the same navigation and footer. (If you would like to load some other navigation or footer on some of the pages, this is very simple to accomplish).<br/>
+      In this way, we have to make the navigation and footer only once, and it will appear on all pages, and will change on all pages if adjusted. </p>
+      <p>
+        The actual content of the page will always be inside the main element. This way, we can always load other pages inside this main element, to dynamically load pages without touching the further parts (navigation, footer). We can also load external content in this main element.
+      </p>
+   </article>
+   <article>
+      <h2>Main content</h2>
+
+<p>
+    If no colums are needed, pages can be build like blocks of content that will be placed after, in other words beneath each other. Much like Bootstrap works, only with simpler code.
+</p>
+
+      <p>
+         The main section contains the content of the page. It is structured in blocks that are placed beneath each other. </p>
+      <p>
+      A block consists of two containers: a section element that has a 100% width and serves as a wrapper, and an article element with the content of the block. It will have a standard width of 80.9% width of the screen, which is based on the golden ratio. 
+      </p>
+
+      <p>
+         Because we can load pages with javascript dynamically, we could work with one master (template) file and load all the others in the MAIN section of that page. <br/>
+         We can also load external pages from other websites in the main area (if CORS rules are met). More on this in the <a href="script.html">Javascript</a> doc. 
+   </p>
+
+   </article>
+</section>
+<section>
+   <article>
+   <h2>Navigation</h2>
+   <p>
+         The navigation will be loaded inside the nav div:
+         <textarea>
+<nav id="nav-load"></nav>
+         </textarea>
+   </p>
+<p>
+   There's a javascript file linked to the page in the head, and at the end of the body there's the code being executed to do the loading of navigation and footer:<br/>
+   <textarea rows="10">
+       <script>
+        window.onload = init;
+        function init() {
+         //fetch-->
+         gsLoadItem( 'inc/footer.html' , '#pagefooter' )
+         gsLoadItem( 'inc/nav.html' , '#nav-load');
+        }
+        </script>
+   </textarea>
+</p>
+
+   </article>
+</section>
+
