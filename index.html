@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="nl">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Dreambits: a simple framework for simple sites</title>
+      <link href="css/dreambits.css" rel="stylesheet" type="text/css"/>
+   </head>
+   <body id="top">
+      <!-- 	grote sprong nv  -->
+      <div id="mobile-logo">
+         <div>
+            <a href="/"></a>
+         </div>
+      </div>
+      <div id="nav-load">
+       <nav id="site-navigation" aria-label="Menu" role="navigation">
+   <!-- Grote Sprong -->
+   <label for="toggle-mobile-menu" aria-label="Menu">&#9776;</label>
+   <input id="toggle-mobile-menu" type="checkbox"/>
+   <div id="main-menu">
+      <div id="site-logo">
+            <a href="index.html"></a>
+      </div>
+      <div id="menu-content">
+         <div class="dropdown-parent">
+            <a class="nav-link" href="index.html">Pages</a>
+           
+            <div class="dropdown"><a class="nav-link" href="index.html">Simple</a><a class="nav-link" href="index-js.html">Javascript</a><a class="nav-link" href="page-header.html">Header</a><a class="nav-link" href="page-menu-reverse.html">Menu reverse</a><a class="nav-link" href="page-menu-header.html">Header with menu</a><a class="nav-link" href="page-js-load.html">Ajax pages</a><a class="nav-link" href="page-one-sidebar.html">One sidebar</a>
+               <a class="nav-link" href="page-two-sidebars.html">Two sidebars</a> <a class="nav-link" href="page-columns.html">Auto columns</a>
+               
+            </div>
+
+         </div>
+         <div><a class="nav-link" href="docs.html">Docs</a></div>
+         <div class="dropdown-parent"> <a class="nav-link" href="block-basic.html">Content block</a><div class="dropdown"><a class="nav-link" href="block-basic.html">Content block</a><a class="nav-link" href="block-1200.html">1200 Width</a><a class="nav-link" href="block-1200-bordered.html">1200 Width, bordered</a>
+         </div>
+         </div> 
+         <div><a class="nav-link" href="modules.html">Modules</a></div>
+      </div>
+   </div>
+</nav>
+      </div>
+      <!-- 	einde grote sprong nav  -->
+      <main>
+         <section>
+            <article data-gs-twocol>
+               <div>
+                  <h2 data-margin="0">Dreambits Framework</h2>
+                  <h3 data-margin="0">Features:</h3>
+                  <ul>
+                     <li>Vanilla HTML/CSS/Javascript</li>
+                     <li>Responsive out of the box</li>
+                     <li>Minimum amount of code</li>
+                     <li>Javascript for dynamic loading of navigation, footer, pages or any element</li>
+                     <li>CSS properties for visual layout</li>
+                     <li>Fluid font sizes</li>
+                     <li>Mobile menu</li>
+                     <li>Modules (tabs, buttons, ect)</li>
+                     
+                  </ul>
+                  <p>This page: most simple setup. Only HTML and CSS. Blocks for building the page, no sidebars, no special design...</p>
+               </div>
+               <div>
+                  <img src="img/grotesprong.jpg" alt="Een grote sprong vooruit!"/>
+               </div>
+            </article>
+         </section>
+         
+         <section>
+            <article>
+               <h2>Content layout</h2>
+               <p>The layout for the content of a page is structured in so called blocks: a SECTION element with a centered ARTICLE element inside. Standard way of building blocks. The ARTICLE will take care of equal content width everywhere.</p>
+               <p><b>PUT ALL CONTENT WITHIN THE ARTICLE BLOCK</b><br/> <b>MARGINS AND PADDINGS ARE TAKING CARE OF</b></p>
+               <p>Use background colors or background images to layout the blocks...<br/>
+               </p>
+               <p><a href="block-basic.html">More on content layout...</a></p>
+
+              
+            </article>
+         </section>
+
+
+  
+
+         <section>
+            <article>
+               <h2>CSS Custom Properties</h2>
+               <p>Also known as CSS varibles. Set all the variables for fonts, colors, widths ect in the top of the CSS file.<br/>
+               You can set for colors and dimentions for all main elements of the page (navigation, header, main content area, sidebars, footer.)<br/>
+               </p>
+               <p>
+                  These custom properties will effect the whole site, so, all pages. (For individual pages you can set the custom properties to an other value if you want a special page)
+               </p>
+              
+               <p>
+                  Create and apply your own color schemes, background images, block layout, font settings.
+               </p>
+            </article>
+         </section>
+         <section>
+            <article>
+               <h2> Attribuut selectors</h2>
+               <p>we use atribute selectors, using the data- prefix. Why not using classes like all do? <br/>
+                  Attribute selectors can be easy manupilated with Javascript. They can be more simple than using classes, while, no value is needed. Just one phrase will do. On the other hand, if we use values, it can be more intuitive versus using multiple classes inside a tag.<br/>
+                  Check this:<br/>
+                  <textarea rows="10">
+                     HTML PAGE
+<div data-width="1rem"></div>
+
+                     CSS CODE
+[data-width="1rem"] {    width: 1rem;}
+[data-width="2rem"] {    width: 2rem;}
+[data-width="3rem"] {    width: 3rem;}
+[data-width="4rem"] {    width: 4rem;}
+[data-width="5rem"] {    width: 5rem;}
+                  </textarea>
+                   </p>
+
+<p>
+   First line is the HTML, the rest is CSS code in the main CSS file, not to be changed. The user can now in the HTM change the "1" to "5" to get a bigger div. 
+</p>
+
+
+                  <p>An example, used on this page to make the full-width section:<br/>
+                  <textarea rows="6">
+         <section data-section-fullwidth>
+            <article>
+               <p>Make blocks 100% width of page</p>
+            </article>
+         </section>
+                  </textarea>
+                  
+                  </p>
+            </article>
+         </section>
+         <section>
+            <article>
+               <h2>Simple &quot;modules&quot;</h2>
+               <p>Any kind of stuff that makes life easier. From two-column gadget to video player.</p>
+               <p>Look at the block at the top of the page: Text on the left side, image on the right. It can be achieved bij adding an attribute selector to an article within a section: data-gs-twocol. On smaller screens, the columns will dissapear and the content will be stacked.&nbsp;</p>
+               <p> <textarea rows="7">
+         <section>
+            <article data-gs-twocol>
+               <div>Column 1</div>
+               <div>Column 2</div>
+            </article>
+         </section>
+                   </textarea> </p>
+            </article>
+         </section>
+      </main>
+      <footer id="footer-load">
+         <section data-gsfooter>
+            <article>
+               Copyleft 2020 Grote Sprong | We use no cookies | We won't track you
+</article>
+         </section>
+      </footer>
+   </body>
+</html>
